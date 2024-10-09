@@ -1,0 +1,9 @@
+BEGIN{sum=0;}
+{
+res=0;
+for(i=2;i<=NF;i++){
+res+=$i;
+}
+sum+=res;
+}
+END{print("average:",(sum/NF));}
