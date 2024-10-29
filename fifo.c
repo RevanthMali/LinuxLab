@@ -15,7 +15,7 @@ void main(){
 		fd1 = open(path,O_WRONLY);
 		write(fd1,msg2,sizeof(msg2));
 		close(fd1);
-		fd2 = open(path,O_WRONLY);
+		fd2 = open(path,O_RDONLY);
 		read(fd2,msg1,sizeof(msg1));
 		printf("parent(received): %s\n",msg1);
 		close(fd2);
